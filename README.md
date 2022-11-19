@@ -407,3 +407,70 @@ And, I looked at the subregions for Asia in more detail, as this region had the 
 
 ![image](https://user-images.githubusercontent.com/117952432/202822196-5037a6ce-3555-462e-8e58-58e9abeaa1f2.png)
 
+##### Q2. What subindices are the highest and lowest? For each region?
+This table lists the average subindices value for each region. The output data table is saved as 2_Avg_Subindex_By_Region.csv and corresponding bar chart is saved as 2_Avg_Subindex_By_Region.jpg.
+
+| ISO_region | MOBILITY | WORKPLACE | PAY | MARRIAGE | PARENTHOOD | ENTRE | ASSETS | PENSION |
+|------------|----------|-----------|-----|----------|------------|-------|--------|---------|
+| Africa | 75.569801 | 34.196937 | 42.120726 | 47.656695 | 28.176638 | 61.235755 | 56.189459 | 65.019587 |
+| Americas | 86.414835 | 46.991758 | 60.453297 | 67.824176 | 31.439560 | 74.285714 | 88.043956 | 72.074176 |
+| Asia | 71.013622 | 36.568510 | 31.730769 | 51.474359 | 24.190705 | 74.759615 | 68.285256 | 48.888221 |
+| Europe | 97.656250 | 56.334135 | 57.115385 | 80.115385 | 66.019231 | 80.685096 | 97.230769 | 59.627404 |
+| Oceania | 88.381410 | 39.943910 | 53.565705 | 82.275641 | 6.730769 | 79.607372 | 52.179487 | 68.669872 |
+
+This bar chart shows the variation of scores for subindices by region. In almost every region (with Europe being the exception) the lowest subindex score is for Parenthood. The scores for Workplace are also generally low, and scores for Mobility are quite high across all regions. Oceania appears to have large variation of scores depending on the subindex.
+
+![image](https://user-images.githubusercontent.com/117952432/202825653-f050475a-4720-4781-90a1-4c43eba53b17.png)
+
+##### Q3. What is the standard deviation for the indices within regions?
+It occurred to me that each region has its own variation of scores within the region. For example, the Africa region contains countries such as Sudan, with a WBL Index of 29.4 in 2022 and South Africa, with an WBL Index of 88.1 in 2022. The standard deviation reveals the amount of variation within a region and over time. The table below lists the minimum WBL Index score, maximum WBL Index score, and standard deviation for each region. This table shows that Asia has the highest standard deviation and Oceania has the lowest. Asia also ties with Africa for the lowest WBL Index score, and Europe and the Americas tie with the highest WBL Index score. The output data table is saved as 3_WBL_MinMax_By_Region.csv. 
+
+| ISO_region | min INDEX | max INDEX | std INDEX |
+|------------|-----------|-----------|-----------|
+| Africa | 17.500 | 89.375 | 15.327807 |
+| Americas | 30.625 | 100.000 | 14.083300 |
+| Asia | 17.500 | 94.375 | 18.558649 |
+| Europe | 33.750 | 100.000 | 15.012421 |
+| Oceania | 41.250 | 97.500 | 11.962596 |
+
+This table lists the standard deviation for all subindices. The output data table is saved as 3_Std_Subindex_By_Region.csv. One thing that stood out to me in this table is that Oceania has a lower standard deviation within the Marriage and Entrepreneurship subindices. I also remembered from the previous bar chart that these subindices are some of the highest scores for Oceania. It is interesting that there is a higher level of alignment in this area within Oceania. 
+
+| ISO_region | MOBILITY | WORKPLACE | PAY | MARRIAGE | PARENTHOOD | ENTRE | ASSETS | PENSION |
+|------------|----------|-----------|-----|----------|------------|-------|--------|---------|
+| Africa | 15.327807 | 21.770071 | 33.215429 | 28.351552 | 28.772420 | 25.665800 | 28.196988 | 27.901471 | 28.947663 |
+| Americas | 14.083300 | 15.459461 | 34.202650 | 23.555008 | 24.908670 | 23.594387 | 19.339299 | 16.563412 | 24.111991 |
+| Asia | 18.558649 | 37.649292 | 30.032276 | 27.600594 | 32.726316 | 26.887767 | 14.242472 | 27.952586 | 27.349807 |
+| Europe | 15.012421 | 8.819150 | 32.776172 | 36.043787 | 17.346486 | 24.741465 | 14.396614 | 10.288041 | 31.613925 |
+| Oceania | 11.962596 | 13.408942 | 27.025434 | 27.325730 | 9.908781 | 18.260236 | 9.700888 | 34.301933 | 19.729145 |
+
+Since these data tables are accounting for variation within a region and variation over time, I also created tables that only look at the most current year of data to isolate the geographic variations from the time variations.
+
+The table below lists the minimum WBL Index score, maximum WBL Index score, and standard deviation for each region for 2022 only. This table shows that now Europe has the lowest standard deviation. I believe this means that Europe has had more change over time in their WBL Index scores. Asia continues to have the largest standard deviation even within the 2022 data. The output data table is saved as 3_WBL_2022MinMax_By_Region.csv. 
+
+
+| ISO_region | min INDEX | max INDEX | std INDEX |
+|------------|-----------|-----------|-----------|
+| Africa | 29.375 | 89.375 | 13.747722 |
+| Americas | 61.250 | 100.000 | 9.304250 |
+| Asia | 26.250 | 94.375 | 19.767862 |
+| Europe | 73.125 | 100.000 | 7.147131 |
+| Oceania | 55.625 | 97.500 | 15.340208 |
+
+This table lists the standard deviation for all subindices for 2022 only. From this table we see that Europe has a standard deviation of 0 for Mobility and for Assets. This means that the European countries are in total alignment in these areas. The output data table is saved as 3_Std_2022_Subindex_By_Region.csv.
+
+| ISO_region | MOBILITY | WORKPLACE | PAY | MARRIAGE | PARENTHOOD | ENTRE | ASSETS | PENSION |
+|------------|----------|-----------|-----|----------|------------|-------|--------|---------|
+| Africa | 13.747722 | 20.693978 | 28.178452 | 30.987278 | 29.543463 | 22.792474 | 21.943681 | 27.400796 | 24.479202 |
+| Americas | 9.304250 | 12.964074 | 28.752055 | 19.119263 | 13.144319 | 28.367338 | 13.480456 | 10.273569 | 17.513500 |
+| Asia | 19.767862 | 30.052407 | 32.781615 | 32.304890 | 32.678859 | 29.890462 | 13.965510 | 27.470164 | 28.403126 |
+| Europe | 7.147131 | 0.000000 | 13.736882 | 22.636693 | 6.076436 | 11.886213 | 8.373302 | 0.000000 | 28.278605 |
+| Oceania | 15.340208 | 12.309149 | 36.084392 | 27.866021 | 5.773503 | 36.306774 | 12.309149 | 37.294894 | 7.216878 |
+
+I created a visual representation of this data with a heat map. The heatmap shows us that Asia and Africa have a larger amount of variation within different countries’ laws as it has a darker blue color for many of the subindices. The differences in Oceania really seem to vary based on the subindex as this region seems to have a lot of contrast in the heat map: Workplace, Parenthood and Assets have a high standard deviation and Marriage, and Pension have a lower standard deviation. Looking along the verticals, Entrepreneurship seems to have the least amount of variation in all the regions and Workplace has more variation. This output file is saved as 3_Std_2022_Subindex_By_Region.jpg.
+
+![image](https://user-images.githubusercontent.com/117952432/202826427-205cfe7f-333c-4481-b911-b512cafb8874.png)
+
+I wondered how much of the variation with regions can be explained with income and decided to create the same data tables and chart with the data displayed by income group instead of region. The data table output was saved as 3_Std_2022_Subindex_By_Income.csv.
+
+
+
