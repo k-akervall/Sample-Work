@@ -445,8 +445,7 @@ This table lists the standard deviation for all subindices. The output data tabl
 
 Since these data tables are accounting for variation within a region and variation over time, I also created tables that only look at the most current year of data to isolate the geographic variations from the time variations.
 
-The table below lists the minimum WBL Index score, maximum WBL Index score, and standard deviation for each region for 2022 only. This table shows that now Europe has the lowest standard deviation. I believe this means that Europe has had more change over time in their WBL Index scores. Asia continues to have the largest standard deviation even within the 2022 data. The output data table is saved as 3_WBL_2022MinMax_By_Region.csv. 
-
+The table below lists the minimum WBL Index score, maximum WBL Index score, and standard deviation for each region for 2022 only. This table shows that now Europe has the lowest standard deviation. I believe this means that Europe has had more change over time in their WBL Index scores. Asia continues to have the largest standard deviation even within the 2022 data. The output data table is saved as 3_WBL_2022MinMax_By_Region.csv.
 
 | ISO_region | min INDEX | max INDEX | std INDEX |
 |------------|-----------|-----------|-----------|
@@ -472,5 +471,81 @@ I created a visual representation of this data with a heat map. The heatmap show
 
 I wondered how much of the variation with regions can be explained with income and decided to create the same data tables and chart with the data displayed by income group instead of region. The data table output was saved as 3_Std_2022_Subindex_By_Income.csv.
 
+| ISO_region | MOBILITY | WORKPLACE | PAY | MARRIAGE | PARENTHOOD | ENTRE | ASSETS | PENSION |
+|------------|----------|-----------|-----|----------|------------|-------|--------|---------|
+| High income | 16.814039 | 18.147699 | 25.054765 | 23.697260 | 21.067977 | 33.965189 | 11.889872 | 23.023362 | 22.089332 |    
+| Upper middle | 13.258919 | 17.657661 | 30.928779 | 25.429938 | 24.587088 | 30.488729 | 17.770746 | 25.157123 | 24.829737 |
+| Lower middle | 14.609014 | 21.923497 | 29.601734 | 30.130189 | 28.403063 | 24.971364 | 18.768930 | 26.208180 | 25.893137 |
+| Low income | 17.369171 | 26.764644 | 31.086109 | 35.841532 | 31.496031 | 22.257237 | 16.554107 | 28.153426 | 28.216198 |
+
+And the chart output was saved as 3_Std_2022_Subindex_By_Income.jpg. This chart shows that the low income group has the most variation in laws, while the high income group has the least variation with the exception of Parenthood. Parenthood appears to have a higher standard deviation within the upper middle and high income groups. Entrepreneurship appears to have less variation in laws in all income groups.
+
+![image](https://user-images.githubusercontent.com/117952432/205554923-35988f86-f27d-448f-a84f-ddc74fb3cc19.png)
+
+##### Q4. Are there any trends in indices changing over time? For specific regions?
+
+To answer this question, I created a line chart with the average WBL Index over time by ISO region. This chart shows that in every region the WBl Index has increased over time and is saved as 4_Avg_WBL_Trend_By_Region.jpg.
+
+![image](https://user-images.githubusercontent.com/117952432/205555032-cc5185c6-16d0-40b3-a2de-2d924317bf21.png)
+
+This question can also be examined with the separate python program created as part of this project named Akervall_Choropleth_Project.py. This program can be run in python and imports the same data as used in the jupyter notebook (WBL Index data and ISO data). It uses the same steps to read in the data and convert it into the indexdf dataframe format. Then it created an animated choropleth map that shows how the WBL Index changes in countries over time. The python program opens a new browser window and the user is able to “play” through the data by clicking the play button at the bottom near the year legend. A static version of the chart is included below. This snapshot is from year 2022. (Spoiler alert! Keep your eye on Spain as the animation progresses. I was surprised to see this country’s WBL Index value pop up so early. Analysis included later on in this report will also touch on this data point.)
+
+![image](https://user-images.githubusercontent.com/117952432/205555088-456f8fef-88eb-49e8-94b4-e2de62b6e092.png)
+
+I also created a line chart displaying the change in the Mobility subindex over time by region and saved it as 4_Avg_Mobility_Trend_By_Region.jpg. Again, Europe has the highest score in this area in all years of data. It is interesting that Oceania appears to have flatlined in about 1985, but is possibly increasing again now.
+
+![image](https://user-images.githubusercontent.com/117952432/205555137-906295a0-8cd4-4090-9e50-9559085e4e6a.png)
+
+I created a line chart displaying the change in the Workplace subindex over time by region and saved it as 4_Avg_Workplace_Trend_By_Region.jpg. This chart shows that many of the regions had a similar subindex score up until the mid-2000s when Europe put in place laws in this area. It is also interesting to see that Africa actually has a higher average Workplace score than the Americas now. Africa rose from the lowest line to the second highest line in the course of the 50 years. 
+
+![image](https://user-images.githubusercontent.com/117952432/205555174-8e22587d-f5df-40de-81b0-da571ad411fe.png)
+
+I created a line chart displaying the change in the Pay subindex over time by region and saved it as 4_Avg_Workplace_Trend_By_Region.jpg. This chart shows that Europe did not actually start with the highest average subindex score, but made changes again in the mid-2000s that raised their average to the highest score.
+
+![image](https://user-images.githubusercontent.com/117952432/205555201-148bef41-388d-4072-8c25-af197874e318.png)
+
+I created a line chart displaying the change in the Marriage subindex over time by region and saved it as 4_Avg_Marriage_Trend_By_Region.jpg. I remember finding that the standard deviation for Oceania in the area of Marriage was quite low. It is interesting to see that this region has had laws regarding women’s quality in Marriage for a long time and must have a great deal of alignment within different Oceanic countries. I am curious if this might be a reflection of culture.
+
+![image](https://user-images.githubusercontent.com/117952432/205555245-36f46c90-e043-41bd-895b-c0cc7da39dd1.png)
+
+I created a line chart displaying the change in the Parenthood subindex over time by region and saved it as 4_Avg_Parenthood_Trend_By_Region.jpg. This chart displays that the average score for the Americas, Africa and Asia all hover around the same point that Europe was in 1980—40 years ago.
+
+![image](https://user-images.githubusercontent.com/117952432/205555273-55a0d121-74d9-4dae-9ec4-d83470c61048.png)
+
+I created a line chart displaying the change in the Entrepreneurship subindex over time by region and saved it as 4_Avg_Entre_Trend_By_Region.jpg. Again, this chart appears to show that Europe made changes to their laws in the mid-2000s that considerable rose this average subindex score.
+
+![image](https://user-images.githubusercontent.com/117952432/205555311-b4ccbddd-af89-41cd-8ea2-7b42fecb692f.png)
+
+I created a line chart displaying the change in the Assets subindex over time by region and saved it as 4_Avg_Assets_Trend_By_Region.jpg. This chart shows that while there has been modest change in Europe, the Americas, and Africa, both Asia and Oceania have had minor changes during the last 50 years in the area of Assets.
+
+![image](https://user-images.githubusercontent.com/117952432/205555366-c52e355a-73b9-49aa-bc36-d885204c5142.png)
+
+I created a line chart displaying the change in the Pension subindex over time by region and saved it as 4_Avg_Pension_Trend_By_Region.jpg. This chart shows that the Americas actually have the highest average subindex score. It also shows that while the subindex increased over the course of the 50 years, at certain time periods the average subindex score actually decreased in regions. None of the other subindex line charts showed a decrease. I am curious why this is.
+
+![image](https://user-images.githubusercontent.com/117952432/205555409-5049ae8f-9594-484b-9e44-d4d01ec4170f.png)
+
+
+##### Q5. What country has had the greatest change in index value?
+
+This table displays the County, ISO code and region, income group, and 1971 WBL Index value (the earliest index available), the 2022 WBL Index value (the most latest index available) and the variation between the two indices. The complete output file is saved as 5_Change_In_WBL_Index_by_Country and the first five records are listed below. Looking at the table, many of the countries with the highest index change are in the high income group. For this reason, the index change of 64.375 for São Tomé and Príncipe stands out to me as an interesting piece of data. I am curious what happened in this country (which is classified as Lower middle income) to move from a score of 18.750 to 83.125.
+
+
+|  | Country | ISO_code | ISO_region | Income_group | 1971 INDEX | 2022 INDEX | Index_Change | 
+|--|---------|----------|------------|--------------|------------|------------|--------------|
+| 156 | Spain	| ESP	| Europe	| High income	| 33.750	| 100.000	| 66.250 |
+| 178	| United Arab Emirates	| ARE	| Asia	| High income	| 17.500	| 82.500	| 65.000 |
+| 143	| São Tomé and Príncipe	| STP	| Africa	| Lower middle income	| 18.750	| 83.125	| 64.375 |
+| 154	| South Africa	| ZAF	| Africa	| Upper middle income	| 25.625	| 88.125	| 62.500 |
+| 15 |	Belgium	| BEL	| Europe	| High income	| 38.125	| 100.000	| 61.875 |
+
+The program also identifies the country with the greatest change in WBL Index value in a printed statement:
+
+> Country with the greatest change in index value: 
+
+|  | Country | ISO_code | ISO_region | Income_group | 1971 INDEX | 2022 INDEX | Index_Change | 
+|--|---------|----------|------------|--------------|------------|------------|--------------|
+| 156 | Spain	| ESP	| Europe	| High income	| 33.750	| 100.000	| 66.250 |
+
+I remember being surprised how Spain became a lighter yellow color around year 1997 when viewing the map animation. I am curious what drove the laws in this country to change and if it influenced other European countries in changing their laws.
 
 
