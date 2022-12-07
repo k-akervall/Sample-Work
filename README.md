@@ -548,4 +548,185 @@ The program also identifies the country with the greatest change in WBL Index va
 
 I remember being surprised how Spain became a lighter yellow color around year 1997 when viewing the map animation. I am curious what drove the laws in this country to change and if it influenced other European countries in changing their laws.
 
+##### Q6. What is the average length of paid maternity leave over time for each region? And paid paternity leave?
+This data table includes current data (2022) and lists the average length of paid maternity leave and paid paternity leave by region. The output file is saved as 6_Avg_Mat_Pat_Leave_By_Region_2022.csv. The variance in averages in this table seems very large. Oceania has an average of 31.5 and all other regions have an average of more than 90 days. The length of paid paternity leave is very small for all regions, with Europe having the greatest average value of 20.575.
 
+| ISO_region | Length of Maternity Leave | Length of Paternity Leave |
+|------------|---------------------------|---------------------------|
+| Africa |	90.09	| 2.56 |
+| Americas	| 93.37	| 3.83 |
+| Asia	| 98.69	| 4.15 |
+| Europe	| 157.20	| 20.58 |
+| Oceania	| 31.50	| 1.83 |
+
+These two line charts show how this data has changed over time by region. The chart showing average length of paid maternity leave is saved as 6_Avg_Mat_Leave_By_Region.jpg and the chart showing average length of paid paternity leave is saved as 6_Avg_Pat_Leave_By_Region.jpg. 
+
+The chart displaying average length of maternity leave shows there appears to be three tiers of regions: Europe has the most paid maternity leave, Asia, the Americas and Africa have similar average lengths of leave, and Oceania has the least.
+
+![image](https://user-images.githubusercontent.com/117952432/206100778-f7aa3785-96a6-44b6-86ea-bf072cb1b197.png)
+
+The chart showing the average length of paid paternity leave shows that this really hasn’t become a thing until the 2000s and then only in Europe. Other regions are slowly making small changes in just recent years.
+
+![image](https://user-images.githubusercontent.com/117952432/206100808-2500781c-f614-475a-93ac-0fc608529ba2.png)
+
+##### Q7. How does the WBL Index relate to the percent of national parliamentary seats held by women in a country?
+
+This plot shows the average percent of national parliamentary seats held by women of the 22 years of data. (This supplemental dataset was not complete for the same years as in the WBL Index dataset.) The pattern shown in this chart seems familiar with Europe on the top of the line chart followed by the Americas. The output file is saved as 7_Avg_Parl_Seats_By_Region_Over_Time.jpg.
+
+![image](https://user-images.githubusercontent.com/117952432/206100871-0d21d4a0-7312-4a9a-b22d-26daf24767b2.png)
+
+After merging the supplemental dataset with WBL Index data, I produced a correlation table for the merged dataset. This file is saved as 7_Corr_PercentWomen_Parl.csv. It shows that there is a 0.529 correlation between the percent of women in parliamentary seats and the WBL index.
+
+I created a scatterplot of the relationship between the percent of parliamentary seats held by women and the WBL Index for each year and country’s data in the merged dataset.  Plots are colored by region and the output file is saved as 7_Percent_Parl_Seats_And_Index.jpg. There seems to be slightly more cohesion in the purple plots representing Europe, while Asia and Africa plots are scattered all over the graph. I found it interesting to see the plots with the highest percent of parliamentary seats held by women are in Africa, while the plots with the highest WBL Index are in Europe. (Remember that this chart is not the average for each region, but each individual county’s data plots.)
+
+![image](https://user-images.githubusercontent.com/117952432/206100932-a3c767aa-5944-4307-b05d-2df1425230b9.png)
+
+Because I was interested in how the relationship with these two variables displayed within each region, I created a series of dual-axis line charts. The first axis has the average percent of parliamentary seats held by women and the second axis has the average WBL Index. Each region is displayed on a separate chart. Output files are saved as 7_Avg_Parl_Index_Africa.jpg, 7_Avg_Parl_Index_Americas.jpg, 7_Avg_Parl_Index_Asia.jpg, 7_Avg_Parl_Index_Europe.jpg and 7_Avg_Parl_Index_Oceania.jpg. It was fascinating seeing how these dual-axis line charts show that the slope of the two lines are very similar in chart—even down to the little divot in the early 2000s in the Oceania region.
+
+![image](https://user-images.githubusercontent.com/117952432/206100961-d52ef60c-79b5-473b-923c-09d4d35bf967.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206100975-25a802c3-19c0-4f55-aea9-2cb823ded6f7.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206100995-64390c3e-cb0c-4c4f-ab34-a4a913c90d49.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101011-d5f9d04f-464b-4011-abb3-dfefb941491f.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101056-c06f7579-aa54-4e18-988d-b12d692970c4.png)
+
+
+##### Q8. How does the WBL Index relate to the ratio of female to male labor force participation rate (%)?
+
+This plot shows the average ratio of women to men in the labor force as a percent figure by region for more than 30 years of data. (This supplemental dataset was not complete for the same years as in the WBL Index dataset.) Again, Europe is the top of the line in the chart. I found it interesting that you can see the impacts of COVID in the Americas data line—when millions of women withdrew from their employment because of the lack of childcare. The output file is saved as 8_Avg_Ratio_Women_Labor_By_Region.jpg.
+
+![image](https://user-images.githubusercontent.com/117952432/206101123-dba791b2-9039-4b2b-b9f5-bceb54c92944.png)
+
+I created a scatterplot of the relationship between the ratio of women to men in the labor force and the WBL Index for each year and country’s data in the merged dataset. Plots are colored by region. This chart was difficult to read, however, and appeared quite blurred, so I tried making the same chart with just 2021 data. This output file is saved as 8_Ratio_Women_Labor_And_Index_2021.jpg. Again the Asia and Africa plots are scattered all over the graph and I am interested in the variation within these regions. 
+
+![image](https://user-images.githubusercontent.com/117952432/206101165-898de779-bfee-402c-a2be-7a80d6a56a74.png)
+
+I investigated the patterns within each region by again creating a series of dual-axis line charts. The first axis has the average ratio of women to men in the labor force as a percentage and the second axis has the average WBL Index. Each region is displayed on a separate chart. Output files are saved as 8_Avg_Ratio_Women_Labor_Index_Africa.jpg, 8_Avg_ Ratio_Women_Labor_Index_Americas.jpg, 8_Avg_ Ratio_Women_Labor_Index_Asia.jpg, 8_Avg_ Ratio_Women_Labor_Index_Europe.jpg and 8_Avg_ Ratio_Women_Labor_Index_Oceania.jpg. I found it interesting that these charts did not appear to show a similar change in trend line with the two variables. As the WBL Index rises in each region, the percent of women in the labor force doesn’t appear to increase at the same rate.
+
+![image](https://user-images.githubusercontent.com/117952432/206101227-d2577679-89a3-4aa8-910c-6a599ec29bf0.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101238-899bf170-7120-4cae-8505-63a8cc84bd4f.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101254-883c4236-17fc-44c1-bc75-f947895e2bed.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101262-ca41f74c-8458-40b3-8acd-719fdc9cfad5.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101280-7ca22b76-7f88-45fa-a382-d21dc9540b49.png)
+
+
+##### Q9. How does the ratio of women to men in the labor force relate to the Workplace subindex? To the Pay subindex? To the Parenthood subindex?
+
+Because I didn’t find a similar pattern in the WBL Index data when examining the ratio of women to men in the labor force, I was curious if using one of the subindices would help coax out any findings. Again, I created a series of dual-axis line charts, but this time the first axis has the average ratio of women to men in the labor force as a percentage and the second axis has the average Workplace subindex score for each region. Output files are saved as 9_Avg_Ratio_Women_Labor_WorkSubindex_Africa.jpg, 9_Avg_Ratio_Women_Labor_WorkSubindex_Americas.jpg, 9_Avg_Ratio_Women_Labor_WorkSubindex_Asia.jpg, 9_Avg_Ratio_Women_Labor_WorkSubindex_Europe.jpg, and 9_Avg_Ratio_Women_Labor_WorkSubindex_Oceania.jpg. This series of line charts actually revealed even less similarly between the two variables.
+
+![image](https://user-images.githubusercontent.com/117952432/206101359-23549f74-ec3d-437b-9149-f91b7ab08812.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101371-ad2a173c-9a18-43a2-bae5-b40f05551fc2.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101394-024c9375-ad8c-4917-a4f4-5bba2c960c1f.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101410-1bf54b69-982d-4721-b362-9f2921964f80.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101436-7a245f9b-2dcd-4d0f-bf86-5948ae4f4780.png)
+
+So, I tried doing the same series of charts with the Pay subindex. Output files are saved as 9_Avg_Ratio_Women_Labor_PaySubindex_Africa.jpg, 9_Avg_Ratio_Women_Labor_PaySubindex_Americas.jpg, 9_Avg_Ratio_Women_Labor_PaySubindex_Asia.jpg, 9_Avg_Ratio_Women_Labor_PaySubindex_Europe.jpg, and 9_Avg_Ratio_Women_Labor_PaySubindex_Oceania.jpg. This series of charts also did not show a similar change in curve for the two variables with the exception of the Americas. I wonder if this could have something to do with the cost of childcare. As women are paid more for their work, they are able to afford childcare and enter the labor force. However, this is just my speculation and is only based on my knowledge of childcare in the US.
+
+![image](https://user-images.githubusercontent.com/117952432/206101485-2d107db9-525d-473c-9b45-7f8f67eafaa7.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101504-dbe1525c-6825-4279-80b8-8b39229ae345.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101519-7c84a275-7fa8-4fbf-a630-b05179ad61ac.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101538-0e1b4c6e-3683-4cd2-8e07-e3f0efb443c5.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101553-a0f94be5-935d-4b19-a98c-9b078215d570.png)
+
+And finally, I recreated the same series of charts using the Parenthood subindex. Output files are saved as 9_Avg_Ratio_Women_Labor_ParentSubindex_Africa.jpg, 9_Avg_Ratio_Women_Labor_ParentSubindex_Americas.jpg, 9_Avg_Ratio_Women_Labor_ParentSubindex_Asia.jpg, 9_Avg_Ratio_Women_Labor_ParentSubindex_Europe.jpg, and 9_Avg_Ratio_Women_Labor_ParentSubindex_Oceania.jpg. This series appears to have some similarity in the two variables for the Americas region, but the other regions don’t share much similarity and the European region especially appears to have different curves for each variable. When viewing this, I started to wonder if the Europe region charts tell us that women in this region have reached the percent of women in the workforce that will be realized. Although the average WBL Index and subindices rise year after year in this region, the ratio of women to men in the labor force appears to be rather flat. 
+
+![image](https://user-images.githubusercontent.com/117952432/206101613-f0da6f10-b931-4f64-8ed3-50aa69a4680a.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101622-855942bc-338e-4050-9b7e-d255bd2a8d3e.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101643-51573ae8-a58a-40f1-8f4c-fe1df29f18d0.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101663-b7e6358e-a89d-4d32-aadc-6dfc2c189a66.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101688-46793db5-3140-4302-9b3a-a277a31a2cba.png)
+
+
+##### Q10. How does childhood mortality relate to the Parenthood subindex?
+
+This plot shows the average of children that live past age five by region for more than 30 years of data. (This supplemental dataset was not complete for the same years as in the WBL Index dataset.) Again, Europe is the top of the line in the chart. I am curious what accounts for the divot in the Americas around year 2010, but don’t recall what the cause might be. The output file is saved as 10_Avg_Child_Mortality_By_Region.jpg. The inverted version of this chart is saved as 10_Avg_Child_Life_By_Region.jpg.
+
+![image](https://user-images.githubusercontent.com/117952432/206101780-615b80a1-2c4a-48da-82ae-83d0430a9daf.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101804-37920846-c0a5-4fc0-99d3-23adaa75ecda.png)
+
+Again, I examined the patterns within each region by creating a series of dual-axis line charts. The first axis has the average percent of children that live past age five and the second axis has the average Parenthood subindex. Each region is displayed on a separate chart. Output files are saved as 10_Avg_Child_Live_Parent_Africa.jpg, 10_Avg_Child_Live_Parent_Americas.jpg, 10_Avg_Child_Live_Parent_Asia.jpg, 10_Avg_Child_Live_Parent_Europe.jpg, and 10_Avg_Child_Live_Parent_Oceania.jpg. These two variables do appear to have a similar slope in the dual-axis line charts—especially in the Americas, Asia and Oceania regions.
+
+![image](https://user-images.githubusercontent.com/117952432/206101847-93695800-41c6-4eb1-9404-8c9d30225cdc.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101873-b3d2caf1-57c5-496e-bf7f-ae91c1656a73.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101890-cd32b61a-61a6-4a12-840b-f1c4ec94ef31.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101912-e2171045-87e2-46dd-87de-a7ffb010e2c7.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206101934-f6eae573-1560-43e2-b2d0-d8cf546fa8b8.png)
+
+
+##### Q11. How does gross national income per capita relate to the WBL Index? To the Pay subindex?
+
+This plot shows the average of gross national income per capital by region for more than 25 years of data. (This supplemental dataset was not complete for the same years as in the WBL Index dataset.) Again, Europe is the top of the line in the chart. The Americas, Asia, and Oceania all appear in a similar range, and the line representing the Africa region is at the bottom of the chart and does not have the same fluctuation over time seen in the other regions. The output file is saved as 11_Avg_GNI_By_Region.jpg.
+
+![image](https://user-images.githubusercontent.com/117952432/206102028-ed1d3585-e425-4e46-ab4d-4efa67db2f28.png)
+
+The correlation table with gross national income per capita data and WBL Index data shoes a correlation of 0.420574 between GNI and the WBL Index, and a correlation of 0.365168. This doesn’t sound like a very strong correlation, but I decided to see what regional charts would reveal for the GNI variable and WBL Index. 
+
+The patterns show on these dual-axis region charts show that overall, as the WBL Index increases, the GNI also increases, however, there are some adjustments up and down along the way. Output files are saved as 11_Avg_GNI_Index_Africa.jpg, 11_Avg_GNI_Index_Americas.jpg, 11_Avg_GNI_Index_Asia.jpg, 11_Avg_GNI_Index_Europe.jpg, and 11_Avg_GNI_Index_Oceania.jpg.
+
+![image](https://user-images.githubusercontent.com/117952432/206102108-419eef2e-69a5-41d4-be3c-8da096c32b3c.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206102120-4c642ef2-19d3-465e-801d-9b13914d3304.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206102141-a137a0a7-9130-4553-9dfd-41f77d45646f.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206102155-5b7f6cdc-23e3-4b40-ad57-7986ea93f43a.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206102177-c6b9c031-9578-48b7-aa97-aaacb05d598c.png)
+
+I then created the same series of dual-axis charts but compared GNI with the Pay subindex. The most interesting region in this series of charts was the Europe region. The two lines appear to mimic each other’s shape over time, which was especially interesting as there was quite a bit of movement in the lines. Output files are saved as 11_Avg_GNI_Pay_Africa.jpg, 11_Avg_GNI_Pay_Americas.jpg, 11_Avg_GNI_Pay_Asia.jpg, 11_Avg_GNI_Pay_Europe.jpg, and 11_Avg_GNI_Pay_Oceania.jpg.
+
+![image](https://user-images.githubusercontent.com/117952432/206102231-28086779-33aa-4128-8770-4593be182c6b.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206102253-75798c32-6e73-49b8-9480-f2588f1eebe1.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206102267-6fa30813-ad74-4693-b46b-c409a22dc6d8.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206102300-36e831b5-5fdd-46d7-87bc-3b186074d336.png)
+
+![image](https://user-images.githubusercontent.com/117952432/206102313-9d13d3f8-aef3-49e6-b52d-d9bc1ff88d41.png)
+
+### VI. Conclusion and Remaining Questions
+Ultimately, I believe this data is a reflection of both policy and culture. Several times during my research I was curious why a certain pattern emerged (for instance the prominence of the Marriage laws in Oceania) and I wondered if it was a reflection of a particular cultural value. If I had a greater knowledge of world cultures, further insights might have been able to be gleaned from this research. However, many interesting observations were still able to be made. Information described in the Output Files and Initial Findings section detail many of my conclusions, but broad themes found in my research are also listed below.
+
+Europe appears to generally have the most laws regarding women’s equality and has had for the last 50 years. This region was consistently at the top of my charts. They also had a lower standard deviation meaning there is less variation of laws between countries. I wonder how much of this lower standard deviation scores are driven by European Union membership. Did the EU spur increased alignment of laws regarding women?
+
+Asia has the most variation in laws (the highest standard deviation) and has the lowest cumulative WBL Index score. If I had more time, I would be curious to do more investigation of the various subregions within Asia. As mentioned in the initial findings section, some subregions within Asia may be comparable to parts of Europe.
+
+The parenthood subindex was an interesting area that I wish I could investigate further. The highest income group has the most variation in laws regarding parenthood. From my bar chart showing the average subindices by region, I know that parenthood has the lowest subindices score in all regions except for Europe. With additional time I would have been interested to see how individual countries within this high income group stack up against each other.
+
+Africa, the Americas, and Asia have similar maternity leave now compared to what Europe had 40 years ago. I’m curious if it will take another 40 years for these regions of the world to reach comparable maternity leave policies as Europe. Paid paternity leave really didn’t register in most countries until 2000, and then only in Europe. Will paid paternity leave have a quicker rate of growth in the remaining regions over the next few decades? What patterns will emerge in Oceania—a region with a very low length of maternity leave, but very strong marriage equality laws?
+
+Some countries in Africa have the highest percent of parliamentary seats held by women, however, as a region, Europe has the highest average. I am curious to find out more information about these African countries that have a high number of seats held by women. What encouraged women to move into these seats? What structures were in place for them to be elected?
+
+The percent of women in parliament and the WBL Index appears to change in a very similar way. I was surprised that I didn’t find that one variable would lead the other in terms of timing, but the changes appeared to be in lock step over time. Does this mean public pressure is changing both occurrences in concert?
+
+The percent of children that live past age 5 and the parenthood subindex seem to have similar curves over time by region. And, the average gross national income per capita and the pay subindex seem to have similar curves over time by region.
+
+I could have spent many more months working with this dataset and finding new views to examine the data. One area of data that wasn’t included in my research is childcare. I think this is a topic that may lead to some interesting insights if combined with the datasets I had available. With more time, I would have tried to find some supplemental data to use in this area. Another area that would be interesting to examine is education levels. I would have liked to include some data about women’s educational attainment to compare with these datasets.
+
+#### FURTHER LIMITATIONS OF THE STUDY
+None of the analysis in this project was intended to capture causation, and this can’t be asserted by any of the findings.
